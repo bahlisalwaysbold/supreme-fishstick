@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — LTE House</title>
+<meta name="description" content="Solar panels, inverters, batteries and accessories from LTE House.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<meta name="theme-color" content="#060607">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page-loader" aria-hidden="true">
+  <svg class="loader-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path class="l-roof-base l-roof-base-left" d="M40 130 L100 60"/>
+    <path class="l-roof-base l-roof-base-right" d="M100 60 L160 130"/>
+    <path class="l-roof-glow l-roof-glow-left" d="M40 130 L100 60"/>
+    <path class="l-roof-glow l-roof-glow-right" d="M100 60 L160 130"/>
+    <circle class="l-bulb-base" cx="100" cy="150" r="15"/>
+    <circle class="l-bulb-glow" cx="100" cy="150" r="15"/>
+    <path class="l-bulb-base-lines" d="M94 167 L106 167 M95 172 L105 172"/>
+  </svg>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-icon.svg" alt="LTE House logo">
+      <span class="brand-name">LTE <span>HOUSE</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="bookings.html" class="btn btn-ghost">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Shop</span>
+      <h1>Panels, inverters, batteries &amp; accessories.</h1>
+      <p>Browse core components below. Add items to your quote request and finish the request on the <a href="bookings.html" style="color:var(--gold);">bookings page</a> — this is a quote-request flow, not checkout; connect a payment provider when you're ready to sell online directly.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="filter-bar reveal">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="panels">Panels</button>
+        <button class="filter-chip" data-filter="inverters">Inverters</button>
+        <button class="filter-chip" data-filter="batteries">Batteries</button>
+        <button class="filter-chip" data-filter="accessories">Accessories</button>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card product-card reveal" data-category="panels">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">panel-mono-450.jpg</span></div></div>
+          <span class="tag">Panels</span>
+          <h3>450W Monocrystalline Panel</h3>
+          <p>21.8% efficiency · 25-year output warranty</p>
+          <p class="price">₦185,000</p>
+          <button class="qty-btn" data-id="panel-450" data-name="450W Monocrystalline Panel" data-price="₦185,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="panels">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">panel-mono-600.jpg</span></div></div>
+          <span class="tag">Panels</span>
+          <h3>600W Bifacial Panel</h3>
+          <p>22.4% efficiency · rear-side light capture</p>
+          <p class="price">₦240,000</p>
+          <button class="qty-btn" data-id="panel-600" data-name="600W Bifacial Panel" data-price="₦240,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="inverters">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">inverter-3kva.jpg</span></div></div>
+          <span class="tag">Inverters</span>
+          <h3>3kVA Hybrid Inverter</h3>
+          <p>Pure sine wave · MPPT built-in</p>
+          <p class="price">₦620,000</p>
+          <button class="qty-btn" data-id="inv-3kva" data-name="3kVA Hybrid Inverter" data-price="₦620,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="inverters">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">inverter-5kva.jpg</span></div></div>
+          <span class="tag">Inverters</span>
+          <h3>5kVA Hybrid Inverter</h3>
+          <p>Pure sine wave · dual MPPT · WiFi monitoring</p>
+          <p class="price">₦950,000</p>
+          <button class="qty-btn" data-id="inv-5kva" data-name="5kVA Hybrid Inverter" data-price="₦950,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="batteries">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">battery-lithium-5kwh.jpg</span></div></div>
+          <span class="tag">Batteries</span>
+          <h3>5kWh Lithium Battery</h3>
+          <p>LiFePO4 · 6,000+ cycle life</p>
+          <p class="price">₦1,450,000</p>
+          <button class="qty-btn" data-id="batt-5kwh" data-name="5kWh Lithium Battery" data-price="₦1,450,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="batteries">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">battery-lithium-10kwh.jpg</span></div></div>
+          <span class="tag">Batteries</span>
+          <h3>10kWh Lithium Battery</h3>
+          <p>LiFePO4 · stackable · app monitoring</p>
+          <p class="price">₦2,650,000</p>
+          <button class="qty-btn" data-id="batt-10kwh" data-name="10kWh Lithium Battery" data-price="₦2,650,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="accessories">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">mounting-rail-kit.jpg</span></div></div>
+          <span class="tag">Accessories</span>
+          <h3>Roof Mounting Rail Kit</h3>
+          <p>Aluminium · corrosion-resistant · per 4 panels</p>
+          <p class="price">₦75,000</p>
+          <button class="qty-btn" data-id="acc-rail" data-name="Roof Mounting Rail Kit" data-price="₦75,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="accessories">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">monitoring-kit.jpg</span></div></div>
+          <span class="tag">Accessories</span>
+          <h3>Remote Monitoring Kit</h3>
+          <p>Real-time system performance on your phone</p>
+          <p class="price">₦95,000</p>
+          <button class="qty-btn" data-id="acc-monitor" data-name="Remote Monitoring Kit" data-price="₦95,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+        <div class="card product-card reveal" data-category="accessories">
+          <div class="ph"><div class="ph-inner"><span class="ph-icon">▲</span>Product photo<span class="ph-file">cabling-kit.jpg</span></div></div>
+          <span class="tag">Accessories</span>
+          <h3>Solar Cabling &amp; Combiner Kit</h3>
+          <p>UV-resistant DC cable, connectors &amp; combiner box</p>
+          <p class="price">₦45,000</p>
+          <button class="qty-btn" data-id="acc-cable" data-name="Solar Cabling & Combiner Kit" data-price="₦45,000" data-label="Add to quote">Add to quote</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="quote-bar">
+  <span>Quote request</span>
+  <span class="count">0</span>
+  <a href="bookings.html" style="color:var(--black); font-weight:700; margin-left:6px;">Review →</a>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="assets/logo-icon.svg" alt="LTE House logo">
+          <span class="brand-name">LTE <span>HOUSE</span></span>
+        </a>
+        <p>Premium solar design, installation and maintenance for homes and businesses.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LTE House on Instagram">IG</a>
+          <a href="#" aria-label="LTE House on Facebook">FB</a>
+          <a href="#" aria-label="LTE House on X (Twitter)">X</a>
+          <a href="#" aria-label="LTE House on LinkedIn">IN</a>
+          <a href="#" aria-label="Message LTE House on WhatsApp">WA</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="bookings.html">Book a survey</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Plot 00, Solar Avenue, Abuja, NG</li>
+          <li>+234 000 000 0000</li>
+          <li>hello@ltehouse.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider-simple"></div>
+    <div class="footer-bottom">
+      <span>© 2026 LTE House. All rights reserved.</span>
+      <span>Built for a cleaner grid.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

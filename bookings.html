@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookings — LTE House</title>
+<meta name="description" content="Book a free site survey or consultation with LTE House.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<meta name="theme-color" content="#060607">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page-loader" aria-hidden="true">
+  <svg class="loader-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path class="l-roof-base l-roof-base-left" d="M40 130 L100 60"/>
+    <path class="l-roof-base l-roof-base-right" d="M100 60 L160 130"/>
+    <path class="l-roof-glow l-roof-glow-left" d="M40 130 L100 60"/>
+    <path class="l-roof-glow l-roof-glow-right" d="M100 60 L160 130"/>
+    <circle class="l-bulb-base" cx="100" cy="150" r="15"/>
+    <circle class="l-bulb-glow" cx="100" cy="150" r="15"/>
+    <path class="l-bulb-base-lines" d="M94 167 L106 167 M95 172 L105 172"/>
+  </svg>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-icon.svg" alt="LTE House logo">
+      <span class="brand-name">LTE <span>HOUSE</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="shop.html">Shop</a>
+      <a href="bookings.html" aria-current="page">Bookings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="bookings.html" class="btn btn-ghost">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Bookings</span>
+      <h1>Book a free site survey or consultation.</h1>
+      <p>Pick a date and time below. An engineer will confirm by phone or email before the visit — no payment required to book a survey.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap grid-2">
+
+      <!-- CALENDAR -->
+      <div class="reveal">
+        <div class="calendar">
+          <div class="cal-head">
+            <b></b>
+            <div class="cal-nav">
+              <button type="button" data-cal-prev aria-label="Previous month">‹</button>
+              <button type="button" data-cal-next aria-label="Next month">›</button>
+            </div>
+          </div>
+          <div class="cal-grid">
+            <span class="dow">S</span><span class="dow">M</span><span class="dow">T</span><span class="dow">W</span><span class="dow">T</span><span class="dow">F</span><span class="dow">S</span>
+          </div>
+        </div>
+
+        <div class="calendar" style="margin-top:20px;">
+          <p style="font-size:0.9rem; color:var(--grey); margin-bottom:6px;">Available times</p>
+          <div class="slot-grid"></div>
+        </div>
+      </div>
+
+      <!-- FORM + SUMMARY -->
+      <div class="reveal">
+        <div class="booking-summary">
+          <div class="summary-row"><span>Date</span><b data-summary-date>—</b></div>
+          <div class="summary-row"><span>Time</span><b data-summary-time>—</b></div>
+        </div>
+
+        <p style="font-size:0.86rem; color:var(--grey); margin:20px 0 8px;">Items in your quote request (optional — from the Shop)</p>
+        <div class="booking-summary" data-quote-list style="margin-bottom:28px;"></div>
+
+        <form id="booking-form" data-fake-submit data-success-target="#booking-success" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="b-name">Full name</label>
+              <input type="text" id="b-name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="b-phone">Phone number</label>
+              <input type="tel" id="b-phone" name="phone" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="b-email">Email</label>
+            <input type="email" id="b-email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="b-address">Property address</label>
+            <input type="text" id="b-address" name="address" placeholder="For the site survey">
+          </div>
+          <div class="field">
+            <label for="b-service">What are you interested in?</label>
+            <select id="b-service" name="service">
+              <option>Residential solar system</option>
+              <option>Commercial / industrial solar</option>
+              <option>Battery &amp; inverter upgrade</option>
+              <option>Maintenance / repair</option>
+              <option>Not sure — advise me</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="b-notes">Notes (optional)</label>
+            <textarea id="b-notes" name="notes" placeholder="Anything we should know before the visit?"></textarea>
+          </div>
+          <input type="hidden" id="booking-date-field" name="preferred_date">
+          <input type="hidden" id="booking-time-field" name="preferred_time">
+          <input type="hidden" id="quote-items-field" name="quote_items">
+          <button type="submit" class="btn btn-primary btn-block" data-booking-submit disabled>Confirm Booking Request</button>
+          <p class="form-note">This form is front-end only for now — wire it to your booking backend or an email service (e.g. Formspree) in js/main.js to actually receive requests.</p>
+        </form>
+
+        <div class="form-success" id="booking-success">
+          <h3 style="font-size:1.1rem;">Request received ✓</h3>
+          <p style="color:var(--grey); margin-top:10px; font-size:0.92rem;">Thanks — a placeholder confirmation. We'll be in touch to confirm your slot once this form is connected to a backend.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="assets/logo-icon.svg" alt="LTE House logo">
+          <span class="brand-name">LTE <span>HOUSE</span></span>
+        </a>
+        <p>Premium solar design, installation and maintenance for homes and businesses.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LTE House on Instagram">IG</a>
+          <a href="#" aria-label="LTE House on Facebook">FB</a>
+          <a href="#" aria-label="LTE House on X (Twitter)">X</a>
+          <a href="#" aria-label="LTE House on LinkedIn">IN</a>
+          <a href="#" aria-label="Message LTE House on WhatsApp">WA</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="bookings.html">Book a survey</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Plot 00, Solar Avenue, Abuja, NG</li>
+          <li>+234 000 000 0000</li>
+          <li>hello@ltehouse.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider-simple"></div>
+    <div class="footer-bottom">
+      <span>© 2026 LTE House. All rights reserved.</span>
+      <span>Built for a cleaner grid.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

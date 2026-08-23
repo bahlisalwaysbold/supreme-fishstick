@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Roofline: two strokes meeting at a peak, matching the LTE House mark -->
+  <path d="M12 74 L60 22" stroke="#F4F1EA" stroke-width="9" stroke-linecap="round"/>
+  <path d="M60 22 L108 74" stroke="#F5B301" stroke-width="9" stroke-linecap="round"/>
+  <!-- Bulb -->
+  <circle cx="60" cy="88" r="11" fill="#F5B301"/>
+  <path d="M55 100 L65 100 M56 104 L64 104 M57 108 L63 108" stroke="#F4F1EA" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
