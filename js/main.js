@@ -35,11 +35,16 @@
   const btn = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
   if(!btn || !links) return;
-  btn.addEventListener('click', () => {
-    links.classList.toggle('open');
-    btn.setAttribute('aria-expanded', links.classList.contains('open'));
+  function setMenu(open){
+    links.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  }
+  btn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') setMenu(false);
   });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 })();
 
 /* ---- scroll reveal ---- */
