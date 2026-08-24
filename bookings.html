@@ -91,7 +91,10 @@
         <p style="font-size:0.86rem; color:var(--grey); margin:20px 0 8px;">Items in your quote request (optional — from the Shop)</p>
         <div class="booking-summary" data-quote-list style="margin-bottom:28px;"></div>
 
-        <form id="booking-form" data-fake-submit data-success-target="#booking-success" novalidate>
+        <form id="booking-form" action="https://formsubmit.co/ahmedltenuhu@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New LTE House booking request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
           <div class="field-row">
             <div class="field">
               <label for="b-name">Full name</label>
@@ -128,12 +131,12 @@
           <input type="hidden" id="booking-time-field" name="preferred_time">
           <input type="hidden" id="quote-items-field" name="quote_items">
           <button type="submit" class="btn btn-primary btn-block" data-booking-submit disabled>Confirm Booking Request</button>
-          <p class="form-note">This form is front-end only for now — wire it to your booking backend or an email service (e.g. Formspree) in js/main.js to actually receive requests.</p>
+          <p class="form-note">Your booking request will be sent to the LTE House team by email.</p>
         </form>
 
         <div class="form-success" id="booking-success">
           <h3 style="font-size:1.1rem;">Request received ✓</h3>
-          <p style="color:var(--grey); margin-top:10px; font-size:0.92rem;">Thanks — a placeholder confirmation. We'll be in touch to confirm your slot once this form is connected to a backend.</p>
+          <p style="color:var(--grey); margin-top:10px; font-size:0.92rem;">Thanks — we'll contact you by phone or email to confirm your selected slot.</p>
         </div>
       </div>
 
