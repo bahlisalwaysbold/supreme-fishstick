@@ -143,6 +143,11 @@ updateQuoteUI();
       link.target = '_blank';
       link.rel = 'noopener';
     });
+    document.querySelectorAll('[aria-label="LTE House on X (Twitter)"]').forEach(link => {
+      link.href = 'https://x.com/lte_house';
+      link.target = '_blank';
+      link.rel = 'noopener';
+    });
   })();
 
 
