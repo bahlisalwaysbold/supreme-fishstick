@@ -401,11 +401,6 @@ section{ padding:88px 0; }
 .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 @media (max-width:600px){ .field-row{ grid-template-columns:1fr; } }
 .form-note{ font-size:0.8rem; color:var(--grey); margin-top:14px; }
-.form-success{
-  display:none; border:1px solid var(--gold); background:rgba(245,179,1,0.06);
-  padding:20px; border-radius:var(--radius); margin-top:20px;
-}
-.form-success.show{ display:block; }
 
 /* ---------- shop ---------- */
 .filter-bar{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
@@ -492,7 +487,6 @@ section{ padding:88px 0; }
 .ceo-role b{ display:block; font-family:var(--body); }
 .ceo-role span{ color:var(--grey); font-size:0.88rem; }
 .ceo-bio{ color:var(--grey); margin-top:20px; font-size:0.96rem; }
-.ceo-sig{ margin-top:28px; font-family:var(--display); font-size:1.6rem; color:var(--gold); }
 @media (max-width:900px){ .ceo-section{ grid-template-columns:1fr; } }
 
 /* ---------- certifications ---------- */
