@@ -136,6 +136,15 @@ updateQuoteUI();
     });
   }));
 })();
+  /* ---- direct contact links ---- */
+  (function contactLinks(){
+    document.querySelectorAll('[aria-label="Message LTE House on WhatsApp"]').forEach(link => {
+      link.href = 'https://wa.me/2349051722541';
+      link.target = '_blank';
+      link.rel = 'noopener';
+    });
+  })();
+
 
 /* ===================== BOOKINGS CALENDAR =====================
    Pure front-end date + time-slot picker. On submit it only
@@ -250,11 +259,8 @@ updateQuoteUI();
   renderSlots();
 })();
 
-/* ===================== FORMS (front-end only) =====================
-   These forms do not send data anywhere yet — they only show a
-   success message so the flow is demoable. Point the <form>
-   action at your backend, form service (e.g. Formspree), or
-   wire up fetch() here when you're ready to go live. */
+/* ===================== DEMO FORMS =====================
+  Keep quote forms local until a backend is connected. */
 document.querySelectorAll('form[data-fake-submit]').forEach(form => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
